@@ -17,6 +17,7 @@ class Signup extends StatelessWidget {
         onTap: () {
           FocusScope.of(context).requestFocus(FocusNode());
         },
+        // ignore: sized_box_for_whitespace
         child: Container(
           height: double.infinity,
           width: double.infinity,
