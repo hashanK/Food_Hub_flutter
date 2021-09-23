@@ -9,9 +9,12 @@ class SocialButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    Size size = MediaQuery.of(context).size;
+
     return Container(
-      padding: EdgeInsets.all(6),
-      width: 140,
+      padding: const EdgeInsets.all(6),
+      width: size.width * 0.4,
       height: 50,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -20,8 +23,8 @@ class SocialButton extends StatelessWidget {
       child: Row(
         children: [
           Image.asset(imagePath, width: 40, height: 40,),
-          SizedBox(width: 5),
-          Text(text, style: TextStyle(color: Colors.black87, fontSize: 14),),
+          const SizedBox(width: 5),
+          Text(text, style: const TextStyle(color: Colors.black87, fontSize: 14),),
         ],
       )
     );
