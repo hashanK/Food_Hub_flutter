@@ -16,5 +16,3 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=hashanK)](https://github.com/anuraghazra/github-readme-stats)
-
