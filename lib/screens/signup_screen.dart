@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:food_hub/constant.dart';
-import 'custom_widgets/custom_button_widget.dart';
-import 'custom_widgets/custom_textfield_widget.dart';
-import 'custom_widgets/social_button_widget.dart';
+import '../custom_widgets/custom_button_widget.dart';
+import '../custom_widgets/custom_textfield_widget.dart';
+import '../custom_widgets/social_button_widget.dart';
 
-class Signup extends StatelessWidget {
+class Signup extends StatefulWidget {
   static const routeName = "/signup";
   const Signup({Key? key}) : super(key: key);
 
+  @override
+  State<Signup> createState() => _SignupState();
+}
+
+class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

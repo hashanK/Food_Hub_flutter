@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   hexcolor: ^2.0.5
+  smooth_page_indicator: ^1.0.0+2
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -33,10 +34,14 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^1.0.4
+  flutter_native_splash: ^1.2.3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
+flutter_native_splash:
+  background_image: assets/images/splash.png
+  android: true
+  ios: true
 # The following section is specific to Flutter.
 flutter:
 
@@ -47,11 +52,7 @@ flutter:
 
   #To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/bgRedEcllipse.png
-    - assets/images/bgWhiteEcllipse.png 
-    - assets/images/bgDougnutEcllipse.png
-    - assets/images/facebook.png
-    - assets/images/google.png
+    - assets/images/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
