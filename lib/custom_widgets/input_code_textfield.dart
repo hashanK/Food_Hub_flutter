@@ -1,20 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:food_hub/constant.dart';
 
-class CustomTextField extends StatelessWidget {
+class InputCodeTextField extends StatelessWidget {
   final String? placeholderText;
   final Widget? trailingIcon;
   final bool isSecureText;
+  final double? fontsize;
+  final double? leftContentPadding;
 
-  CustomTextField(
-      {this.placeholderText, this.trailingIcon, required this.isSecureText});
+  InputCodeTextField(
+      {this.placeholderText, this.trailingIcon, required this.isSecureText, this.fontsize, this.leftContentPadding});
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      keyboardType: TextInputType.number,
+      onChanged: (_) => FocusScope.of(context).nextFocus(),
       obscureText: isSecureText ? true : false,
-      style: TextStyle(color: labelTextColor),
+      style: TextStyle(color: buttonBGcolor, fontSize: fontsize),
       decoration: InputDecoration(
+        contentPadding: EdgeInsets.fromLTRB((leftContentPadding ?? 10.0), 20.0, 10.0, 20.0),
         fillColor: textFieldBGColor,
         filled: true,
         border: OutlineInputBorder(

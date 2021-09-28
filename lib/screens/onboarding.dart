@@ -1,3 +1,4 @@
+import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:food_hub/screens/onboarding_page.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -45,6 +46,17 @@ class _OnboardingState extends State<Onboarding> {
     });
   }
 
+  _animateToPage() {
+    if (_currentPage == 1) {
+      return MediaQuery.of(context).size.width * 2;
+    } else if (_currentPage == 2) {
+      return 2;
+    } else {
+      return MediaQuery.of(context).size.width;
+    }
+  }
+
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -91,7 +103,15 @@ class _OnboardingState extends State<Onboarding> {
                     size: 30,
                   ),
                   onPressed: () {
-
+                    // _controller.nextPage(
+                    //   duration: const Duration(microseconds: 800),
+                    //   curve: Curves.easeInOutQuint,
+                    // );
+                    _controller.animateTo(
+                      _animateToPage(),
+                      duration: const Duration(milliseconds: 400),
+                      curve: Curves.easeIn,
+                    );
                   },
                 ),
               ),

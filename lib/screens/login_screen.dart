@@ -3,14 +3,12 @@ import 'package:food_hub/constant.dart';
 import 'package:food_hub/custom_widgets/custom_button_widget.dart';
 import 'package:food_hub/custom_widgets/social_button_widget.dart';
 import 'package:food_hub/screens/signup_screen.dart';
+import 'package:food_hub/screens/verification_screen.dart';
 
 import '../custom_widgets/back_button.dart';
 import '../custom_widgets/custom_textfield_widget.dart';
 
-
-
 class LoginScreen extends StatefulWidget {
-
   static const routeName = "/login";
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -124,11 +122,18 @@ class _LoginScreenState extends State<LoginScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          CustomButton(
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.of(context)
+                                  .pushNamed(VerificationScreen.routeName);
+                            },
+                            child: CustomButton(
                               bgColor: buttonBGcolor,
                               btnText: "LOGIN",
                               btnTextColor: Colors.white,
-                              cornerRadius: 25),
+                              cornerRadius: 25,
+                            ),
+                          ),
                         ],
                       ),
                       const SizedBox(height: 30),
