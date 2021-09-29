@@ -74,15 +74,15 @@ class _VerificationScreenState extends State<VerificationScreen> {
                             "Verification Code",
                             style: TextStyle(color: Colors.white, fontSize: 30),
                           ),
-                          const SizedBox(height: 25),
-                          const Text(
+                          const SizedBox(height: 20),
+                          Text(
                             'Please type the verification code sent to hashankannangara@gmail.com',
                             style: TextStyle(
                               fontSize: 15,
-                              color: Colors.white,
+                              color: labelTextColor,
                             ),
                           ),
-                          const SizedBox(height: 25),
+                          const SizedBox(height: 30),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -92,6 +92,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                                   isSecureText: false,
                                   fontsize: 27.0,
                                   leftContentPadding: 25.0,
+                                  isLastTF: false,
                                 ),
                               ),
                               SizedBox(
@@ -100,6 +101,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                                   isSecureText: false,
                                   fontsize: 27.0,
                                   leftContentPadding: 25.0,
+                                  isLastTF: false,
                                 ),
                               ),
                               SizedBox(
@@ -108,6 +110,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                                   isSecureText: false,
                                   fontsize: 27.0,
                                   leftContentPadding: 25.0,
+                                  isLastTF: false,
                                 ),
                               ),
                               SizedBox(
@@ -116,6 +119,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                                   isSecureText: false,
                                   fontsize: 27.0,
                                   leftContentPadding: 25.0,
+                                  isLastTF: true,
                                 ),
                               ),
                             ],

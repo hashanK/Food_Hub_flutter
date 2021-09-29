@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_hub/constant.dart';
 import 'package:food_hub/custom_widgets/custom_button_widget.dart';
 import 'package:food_hub/custom_widgets/social_button_widget.dart';
+import 'package:food_hub/screens/forgot_password_screen.dart';
 import 'package:food_hub/screens/signup_screen.dart';
 import 'package:food_hub/screens/verification_screen.dart';
 
@@ -71,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(height: 80),
+                      const SizedBox(height: 40),
                       const Text(
                         "Login",
                         style: TextStyle(color: Colors.white, fontSize: 30),
@@ -88,7 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           CustomTextField(
                             placeholderText: "Your email or phone",
                             isSecureText: false,
-                          )
+                          ),
                         ],
                       ),
                       const SizedBox(height: 20),
@@ -110,9 +111,15 @@ class _LoginScreenState extends State<LoginScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
-                              Text(
-                                "Forgot Password?",
-                                style: TextStyle(color: labelTextColor),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).pushNamed(
+                                      ForgotPasswordScreen.routeName);
+                                },
+                                child: Text(
+                                  "Forgot Password?",
+                                  style: TextStyle(color: labelTextColor),
+                                ),
                               )
                             ],
                           )

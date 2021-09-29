@@ -4,10 +4,11 @@ import 'package:food_hub/constant.dart';
 class CustomTextField extends StatelessWidget {
   final String? placeholderText;
   final Widget? trailingIcon;
+  final Widget? leadingIcon;
   final bool isSecureText;
 
   CustomTextField(
-      {this.placeholderText, this.trailingIcon, required this.isSecureText});
+      {this.placeholderText, this.trailingIcon, this.leadingIcon, required this.isSecureText});
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +19,16 @@ class CustomTextField extends StatelessWidget {
         fillColor: textFieldBGColor,
         filled: true,
         border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.0),
-            borderSide: const BorderSide(style: BorderStyle.none, width: 0.0)),
+          borderRadius: BorderRadius.circular(10.0),
+          borderSide: const BorderSide(
+            style: BorderStyle.none,
+            width: 0.0,
+          ),
+        ),
         hintText: placeholderText,
         hintStyle: TextStyle(color: labelTextColor),
         suffixIcon: trailingIcon,
+        prefixIcon: leadingIcon,
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
           borderSide: BorderSide(color: buttonBGcolor, width: 1.0),
