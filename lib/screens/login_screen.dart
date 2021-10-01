@@ -28,51 +28,46 @@ class _LoginScreenState extends State<LoginScreen> {
         onTap: () {
           FocusScope.of(context).requestFocus(FocusNode());
         },
-        child: SingleChildScrollView(
-          child: SizedBox(
-            width: double.infinity,
-            height: size.height,
-            child: Stack(
-              children: [
-                const Positioned(
-                  top: 60,
-                  left: 20,
-                  child: CustomBackButton(),
+        child: SizedBox(
+          width: double.infinity,
+          height: size.height,
+          child: Stack(
+            children: [
+              Positioned(
+                top: -70,
+                right: -70,
+                child: Image.asset(
+                  "assets/images/bgRedEcllipse.png",
+                  width: 150,
+                  height: 150,
                 ),
-                Positioned(
-                  top: -70,
-                  right: -70,
-                  child: Image.asset(
-                    "assets/images/bgRedEcllipse.png",
-                    width: 150,
-                    height: 150,
-                  ),
+              ),
+              Positioned(
+                top: -30,
+                left: -50,
+                child: Image.asset(
+                  "assets/images/bgDougnutEcllipse.png",
+                  width: 96,
+                  height: 96,
                 ),
-                Positioned(
-                  top: -30,
-                  left: -50,
-                  child: Image.asset(
-                    "assets/images/bgDougnutEcllipse.png",
-                    width: 96,
-                    height: 96,
-                  ),
+              ),
+              Positioned(
+                top: -90,
+                left: -8,
+                child: Image.asset(
+                  "assets/images/bgWhiteEcllipse.png",
+                  width: 140,
+                  height: 140,
                 ),
-                Positioned(
-                  top: -90,
-                  left: -8,
-                  child: Image.asset(
-                    "assets/images/bgWhiteEcllipse.png",
-                    width: 140,
-                    height: 140,
-                  ),
-                ),
-                Container(
+              ),
+              SingleChildScrollView(
+                child: Container(
                   padding: const EdgeInsets.all(23.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(height: 40),
+                      SizedBox(height: size.width * 0.35),
                       const Text(
                         "Login",
                         style: TextStyle(color: Colors.white, fontSize: 30),
@@ -209,8 +204,13 @@ class _LoginScreenState extends State<LoginScreen> {
                     ],
                   ),
                 ),
-              ],
-            ),
+              ),
+              const Positioned(
+                top: 30,
+                left: 23,
+                child: CustomBackButton(),
+              ),
+            ],
           ),
         ),
       ),

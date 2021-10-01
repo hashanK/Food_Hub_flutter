@@ -87,7 +87,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               SizedBox(
-                                width: 70,
+                                width: size.width * 0.2,
                                 child: InputCodeTextField(
                                   isSecureText: false,
                                   fontsize: 27.0,
@@ -96,7 +96,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                                 ),
                               ),
                               SizedBox(
-                                width: 70,
+                                width: size.width * 0.2,
                                 child: InputCodeTextField(
                                   isSecureText: false,
                                   fontsize: 27.0,
@@ -105,7 +105,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                                 ),
                               ),
                               SizedBox(
-                                width: 70,
+                                width: size.width * 0.2,
                                 child: InputCodeTextField(
                                   isSecureText: false,
                                   fontsize: 27.0,
@@ -114,7 +114,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                                 ),
                               ),
                               SizedBox(
-                                width: 70,
+                                width: size.width * 0.2,
                                 child: InputCodeTextField(
                                   isSecureText: false,
                                   fontsize: 27.0,

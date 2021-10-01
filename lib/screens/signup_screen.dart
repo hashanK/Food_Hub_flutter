@@ -20,7 +20,6 @@ class _SignupState extends State<Signup> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       backgroundColor: mainBGHexColor,
       body: GestureDetector(
         onTap: () {

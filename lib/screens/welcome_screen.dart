@@ -21,17 +21,17 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Stack(
-          children: [
-            Container(
-              height: size.height,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage("assets/images/onboard_bg_image.png"),
-                ),
+      body: Stack(
+        children: [
+          Container(
+            height: size.height,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage("assets/images/onboard_bg_image.png"),
               ),
+            ),
+            child: SingleChildScrollView(
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 23.0),
                 child: Column(
@@ -44,26 +44,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            ElevatedButton(
-                              child: const Text('Skip'),
-                              style: ElevatedButton.styleFrom(
-                                  primary: Colors.white,
-                                  onPrimary: buttonBGcolor,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  elevation: 1),
-                              onPressed: () {
-                                Navigator.of(context)
-                                    .pushNamed(Onboarding.routeName);
-                                //print(size.width);
-                              },
-                            ),
-                          ],
-                        ),
                         SizedBox(
                           height: size.height * 0.15,
                         ),
@@ -199,6 +179,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                 ),
                               ],
                             ),
+                            const SizedBox(height: 25),
                           ],
                         ),
                       ],
@@ -207,8 +188,30 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+          Container(
+            padding: EdgeInsets.fromLTRB(23.0, (size.width * 0.1), 23.0, 30.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                ElevatedButton(
+                  child: const Text('Skip'),
+                  style: ElevatedButton.styleFrom(
+                      primary: Colors.white,
+                      onPrimary: buttonBGcolor,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      elevation: 1),
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(Onboarding.routeName);
+                    //print(size.width);
+                  },
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
